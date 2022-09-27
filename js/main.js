@@ -85,3 +85,37 @@ modalCloses.forEach((modalClose) => {
     });
   });
 });
+
+// swiper
+const portfolioSlider = new Swiper(".portfolio__container", {
+  cssMode: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const testimonialsSlider = new Swiper(".testimonials__container", {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 48,
+  pagination: {
+    el: ".swiper-pagination-testimonial",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    568: {
+      slidesPerView: 2,
+    },
+  },
+});
